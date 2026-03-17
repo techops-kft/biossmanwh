@@ -31,12 +31,21 @@ DB_DESTINO_CONFIG = {
 
 
 plan_ejecucion = [
-    #{"modulo": "dim_cliente", "funcion": "insertar_cliente", "dependencia": [], "ejecucion": None},
-    #{"modulo": "dim_tipos_servicios", "funcion": "insertar_tipos_servicios", "dependencia": [], "ejecucion": None},
-    #{"modulo": "dim_motivo_venta_no_realizada", "funcion": "insertar_motivo_venta_no_realizada", "dependencia": [], "ejecucion": None},
-    #{"modulo": "fact_folios", "funcion": "insertar_folios", "dependencia": [], "ejecucion": None},
-    #{"modulo": "fact_folios_intermedios", "funcion": "insertar_folios_intermedios", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_cliente", "funcion": "insertar_cliente", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_cliente", "funcion": "actualizar_cliente", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_tipos_servicios", "funcion": "insertar_tipos_servicios", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_tipos_servicios", "funcion": "actualizar_tipos_servicios", "dependencia": [], "ejecucion": None},    
+    {"modulo": "dim_cat_motivo_venta_no_realizada", "funcion": "insertar_motivo_venta_no_realizada", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_motivo_venta_no_realizada", "funcion": "actualizar_motivo_venta_no_realizada", "dependencia": [], "ejecucion": None},
+    #{"modulo": "dim_cat_materiales", "funcion": "insertar_materiales", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_unidades_negocio", "funcion": "insertar_unidades_negocio", "dependencia": [], "ejecucion": None},
+    {"modulo": "dim_cat_almacenes", "funcion": "insertar_almacenes", "dependencia": [], "ejecucion": None},
+    {"modulo": "fact_folios", "funcion": "insertar_folios", "dependencia": [], "ejecucion": None},
+    {"modulo": "fact_folios", "funcion": "actualizar_folios", "dependencia": [], "ejecucion": None},
+    {"modulo": "fact_folios_intermedios", "funcion": "insertar_folios_intermedios", "dependencia": [], "ejecucion": None},
+    {"modulo": "fact_folios_intermedios", "funcion": "actualizar_folios_intermedios", "dependencia": [], "ejecucion": None},
     {"modulo": "fact_articulos_venta_no_realizada_folios", "funcion": "insertar_articulos_venta_no_realizada_folios", "dependencia": [], "ejecucion": None},
+    {"modulo": "fact_articulos_venta_no_realizada_folios", "funcion": "actualizar_articulos_venta_no_realizada_folios", "dependencia": [], "ejecucion": None},
     
 ]
 
